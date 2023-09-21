@@ -142,3 +142,55 @@
 // if (section) {
 //   section.setAttribute('id', 'newId');
 // }
+// const sectionElement = document.querySelector('#commentsList');
+
+// if (sectionElement) {
+//   // jesli sectionelement zostalo wyszukane
+//   const className = sectionElement.className;
+//   // pobierz nazwe klasy
+//   if (className.includes('comments')) {
+//     // jesli klasa zawiera ciag znakow [comments]
+//     sectionElement.className = '';
+//     //zmien jej wartosc na pusty ciag znakow
+//   }
+// }
+
+// const sectionElement = document.querySelector('.comments');
+
+// if (sectionElement) {
+//   const classToRemove = 'comments--active';
+//   const className = sectionElement.className;
+
+//   sectionElement.className = className.replace(classToRemove, '');
+// }
+
+// const sectionElement = document.querySelector('.comments');
+
+// if (sectionElement) {
+//   sectionElement.classList.toggle('comments--active');
+// }
+// const pElement = document.querySelector('p');
+// pElement.innerHTML = 'Tekst z <strong>ważną</strong> informacja';
+
+// const inputEl = document.querySelector('input');
+// const commentsEl = document.querySelector('ul');
+// if (inputEl && commentsEl) {
+//   const newLi = document.createElement('li');
+//   newLi.innerHTML = inputEl.value;
+//   // pobieram zawartosc pola formularza, jesli uzytknownik wprowadzil kod html, ktory zawiera zlosliwy kod, to zostanie on dodany na nasza strone
+//   commentsEl.appendChild(newLi);
+// }
+
+const divElement = document.querySelector('div');
+
+if (divElement) {
+  //jesli element zostal wyszukany
+
+  if (divElement.style.backgroundColor === 'red');
+  // jesli styl o nazwie color ma wartosc rowna red to...
+  divElement.innerText = 'Div is red!';
+  // zmien jego zawartosc
+  // ustawiamy kolor tla dla elementu, zawsze stosujemy zapis camelCase, jesli styl sklada sie z kilu czlonow
+  divElement.style.fontSize = '14px';
+  // i nie zapominamy o jednostkach
+}
