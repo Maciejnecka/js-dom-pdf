@@ -59,3 +59,86 @@
 // });
 
 // console.log(firstEmpty);
+// wyszukaj element <div/>
+// const fooElement = document.getElementById('foo');
+// if (fooElement !== null) {
+//   // wykonaj tylko wtedy, gdy element zostal wyszukany
+//   fooElement.textContent = 'new text';
+// }
+
+// // wyszukaj element <p/>
+// const barElement = document.getElementById('bar');
+// if (barElement !== null) {
+//   barElement.className = 'newClass';
+// }
+
+// wyszukuje element o klasie [.box]
+// const boxList = document.getElementsByClassName('box');
+// for (let i = 0; i < boxList.length; i++) {
+//   boxList[i].textContent = 'index ->' + i;
+//   // dodaje do zawartosci tekst o wartosci rownej indeksowi, do ktorej jest przypisany wyszukiwany element
+// }
+
+// // zmieniam obiekt typu [HTMLCollection] na tablice, dzieki czemu bede mogl skorzystac  metod tablicowych np. [.forEach()]
+
+// const arr = Array.from(boxList);
+// arr.forEach(function (element) {
+//   // dodaje obramowanei do kazdego wyszukiwanego elementu
+//   element.style.border = '1px solid green';
+// });
+// wyszukuje wszystkie elementy <div/>
+// const divList = document.getElementsByTagName('div');
+// for (let i = 0; i < divList.length; i++) {
+//   divList[i].textContent = 'index ->' + i;
+//   // dodaje do zawartosci tekst o wartosci rownej indeksowi do ktorej jest przypisany wyszukany element
+// }
+// console.log(divList);
+// wyszukuje element o id [#foo]
+// const fooEl = document.querySelector('#foo');
+// if (fooEl) {
+//   // jesli element istnieje, to przeszukuje go wzgledem elementów o klasie [.box]
+//   const boxList = fooEl.getElementsByClassName('box');
+//   for (let i = 0; i < boxList.length; i++) {
+//     // w kazdym wyszukanym wczesniej elemencie poszukuje znacznikow <p/>
+//     const pList = boxList[i].querySelectorAll('p');
+//     pList.forEach(function (p) {
+//       // gdy zostana wyszkane, dodaje im obramowanie
+//       p.style.border = '2px solid green';
+//     });
+//   }
+// }
+// const imageElement = document.querySelector('img');
+// if (imageElement && !imageElement.hasAttribute('src')) {
+//   // najpierw sprawdzam czy imageElement jest prawdziwy pamietajac, ze null jest wartosci falszywa a obiekt (nawet pusty) prawdziwa
+//   imageElement.setAttribute('src', 'default.png');
+//   // ustaw jego wartosc na default.png czyli na domyslny obrazek
+// }
+// console.log(imageElement);
+// const imageList = document.querySelectorAll('img');
+// imageList.forEach(function (item) {
+//   item.removeAttribute('class');
+//   // nie musze sprawdzac, czy atrybut istnieje, jesli nie bedzie istniaj to JS nie bedzie mial czego usunac i nic sie nie stanie
+//   console.log(item.getAttribute('alt'));
+//   // dodatkowo w konsoli wyswietl zawartosc atrybutu alt
+// });
+// console.log(imageList);
+// const liElement = document.querySelector('li');
+// if (liElement) {
+//   console.log(liElement.dataset.age, liElement.dataset.city);
+//   console.log(liElement.dataset.zipCode);
+// }
+// const liElement = document.querySelector('li');
+// if (liElement) {
+//   liElement.setAttribute('data-color', 'red');
+//   liElement.dataset.bgColor = 'green';
+// }
+// const section = document.querySelector('.comments');
+// if (section) {
+//   section.id = 'newId';
+// przypisujemy do zmiennej idValue, zawartosc atrybutu id tj. commentsList
+// }
+
+// const section = document.querySelector('.comments');
+// if (section) {
+//   section.setAttribute('id', 'newId');
+// }
