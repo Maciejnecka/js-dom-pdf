@@ -276,3 +276,73 @@
 //   sectionEl.appendChild(clonePEl);
 //   // dodajemy kopie elementu <p/> do elementu <section/> od teraz element <p/> znajduje się w obu miejcach
 // }
+// const articleElement = document.querySelector('article');
+// const pElement = articleElement.querySelector('p:first-child');
+
+// if (articleElement && pElement) {
+//   articleElement.removeChild(pElement);
+//   // w tym momencie element <p/> nie istnieje w drewie DOM, co oznacza, ze jest niewidoczny dla uzytkownika
+// }
+
+// const pElement = document.querySelector('p');
+// if (pElement) {
+//   pElement.remove();
+//   // element zostal usuniety z drzewa DOM niestety to nie zadziala w IE
+// }
+
+// const btnEl = document.querySelector('button');
+// if (btnEl) {
+//   const sectionEl = btnEl.parentElement;
+//   sectionEl.style.display = 'none';
+//   // nie sprawdzam, czy parent istnieje, poniewaz wezel zawsze posiada rodzica, jesli nie jest korzeniem i zostal dodany do DOM
+
+//   const mainEl = sectionEl.nextElementSibling;
+//   if (mainEl) {
+//     mainEl.style.display = 'block';
+//   }
+// }
+
+// const ulElement = document.querySelector('ul');
+// if (ulElement && ulElement.hasChildNodes()) {
+//   // jesli element zostal wyszukany i posiada dzieci
+
+//   const children = ulElement.children;
+
+//   if (children.length > 1) {
+//     // jesli liczba dzieci jest wieksza niz 1, to
+//     children[1].innerText = 'second child';
+//   }
+// }
+
+// const ulElement = document.querySelector('ul');
+
+// if (ulElement && ulElement.hasChildNodes()) {
+//   // jesli element zostal wyszukany i posiada dzieci
+
+//   const first = ulElement.firstElementChild;
+//   // zapisuje odniesienie do pierwszego elementu jesli nie sitnieje, to bedzie null
+
+//   const last = ulElement.lastElementChild;
+//   //zapisuje odniesienie do ostatniego elementuu jesli nie istnieje to bedzie null
+//   console.log(first, last);
+// }
+
+const ulElement = document.querySelector('ul');
+if (ulElement && ulElement.hasChildNodes()) {
+  // jesli element zostal wyszukany i posiada dzieci
+  const children = ulElement.children;
+  // zapisz wszystkie dzeici do zmiennej
+
+  console.log('Pierwsze dziecko ma potomstwo: ');
+  if (children[0].hasChildNodes()) {
+    console.log(true);
+  }
+  console.log('Drugie dziecko ma potomstwo: ');
+  if (children[1].hasChildNodes()) {
+    console.log(true);
+  }
+  console.log('Trzecie dziecko ma potomstwo: ');
+  {
+    console.log(true);
+  }
+}
