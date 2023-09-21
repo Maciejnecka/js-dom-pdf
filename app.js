@@ -181,16 +181,98 @@
 //   commentsEl.appendChild(newLi);
 // }
 
-const divElement = document.querySelector('div');
+// const divElement = document.querySelector('div');
 
-if (divElement) {
-  //jesli element zostal wyszukany
+// if (divElement) {
+//   //jesli element zostal wyszukany
 
-  if (divElement.style.backgroundColor === 'red');
-  // jesli styl o nazwie color ma wartosc rowna red to...
-  divElement.innerText = 'Div is red!';
-  // zmien jego zawartosc
-  // ustawiamy kolor tla dla elementu, zawsze stosujemy zapis camelCase, jesli styl sklada sie z kilu czlonow
-  divElement.style.fontSize = '14px';
-  // i nie zapominamy o jednostkach
-}
+//   if (divElement.style.backgroundColor === 'red');
+//   // jesli styl o nazwie color ma wartosc rowna red to...
+//   divElement.innerText = 'Div is red!';
+//   // zmien jego zawartosc
+//   // ustawiamy kolor tla dla elementu, zawsze stosujemy zapis camelCase, jesli styl sklada sie z kilu czlonow
+//   divElement.style.fontSize = '14px';
+//   // i nie zapominamy o jednostkach
+// }
+// const divEl = document.querySelector('div');
+// if (divEl) {
+//   const styles = getComputedStyle(divEl);
+
+//   const oldColor = styles.getPropertyValue('--color');
+//   console.log(oldColor);
+
+//   const docElement = document.documentElement;
+//   docElement.style.setProperty('--color', 'orange');
+
+//   const newColor = styles.getPropertyValue('--color');
+//   console.log(newColor);
+// }
+// tworze nowy element section
+
+// const newSection = document.createElement('section');
+
+// // dodaje do niego klase
+
+// newSection.classList.add('comments');
+
+// // dodaje do niego tekst
+// newSection.innerText = 'Lorem ipsum...';
+
+// // dodaje atrybut data-label
+// newSection.dataset.label = 'Some text...';
+
+// // dodaje identyfikator
+// newSection.id = 'commentsList';
+
+// niestety ten element nie jest jeszcze widoczny w drzewie DOM
+// const articleElement = document.querySelector('article');
+// if (articleElement) {
+//   const newSection = document.createElement('section');
+
+//   newSection.classList.add('comments');
+//   newSection.innerText = 'Lorem ipsum...';
+//   newSection.dataset.label = 'Some text...';
+//   newSection.id = 'commentsList';
+
+//   articleElement.appendChild(newSection);
+
+// dodaje do elementu article, nowa sekcje jako ostatnie dziecko
+// }
+
+// const articleElement = document.querySelector('article');
+// const pElement = articleElement.querySelector('p:first-child');
+
+// if (articleElement && pElement) {
+//   const newEl = document.createElement('header');
+//   newEl.innerText = 'Some text...';
+
+//   articleElement.insertBefore(newEl, pElement);
+//   // dodaje do elementu <article/> nagłówek który ma być osadzony przed elementem <p/>
+// }
+// const articleElement = document.querySelector('article');
+// const pElement = articleElement.querySelector('p:first-child');
+
+// if (articleElement && pElement) {
+//   const newEl = document.createElement('header');
+//   newEl.innerText = 'Some text...';
+
+//   articleElement.replaceChild(newEl, pElement);
+//   // nadpisuje element <p/> utworzonym elementem <header/>
+// }
+
+// const pEl = document.querySelector('p');
+// const sectionEl = document.querySelector('section');
+// if (sectionEl && pEl) {
+//   sectionEl.appendChild(pEl);
+//   // element <p/> zostanie przeniesiony do elementu <section/>, co spowoduje, że w elemencie <article/> nie bedzie juz tego elementu
+// }
+
+// const pEl = document.querySelector('p');
+// const sectionEl = document.querySelector('section');
+// if (sectionEl && pEl) {
+//   const clonePEl = pEl.cloneNode(true);
+//   // kopiujemy element z cala jego zawartoscia
+
+//   sectionEl.appendChild(clonePEl);
+//   // dodajemy kopie elementu <p/> do elementu <section/> od teraz element <p/> znajduje się w obu miejcach
+// }
